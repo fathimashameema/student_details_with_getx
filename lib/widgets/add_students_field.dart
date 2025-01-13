@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class AddStudentsField extends StatelessWidget {
   final Widget navigateTo;
@@ -15,8 +16,7 @@ class AddStudentsField extends StatelessWidget {
       ),
       child: TextButton(
         onPressed: () {
-          Navigator.of(context)
-              .push(MaterialPageRoute(builder: (ctx) => navigateTo));
+          Get.to(navigateTo);
         },
         child: const Row(
           mainAxisAlignment: MainAxisAlignment.center,

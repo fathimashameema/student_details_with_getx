@@ -24,7 +24,7 @@ class StudentController extends GetxController {
   void setImage(File? image) {
     selectedImage.value = image;
     print('Image set');
-    update(); // Notifies listeners in GetX
+    update(); 
   }
 
   void clearImage() {

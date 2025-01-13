@@ -23,7 +23,7 @@ class CustomSearchFormField extends StatelessWidget {
           color: Colors.grey.withOpacity(0.3),
           borderRadius: BorderRadius.circular(10),
         ),
-        suffixIcon: Icon(
+        suffixIcon: const Icon(
           Icons.clear_rounded,
           color: Colors.grey,
         ),

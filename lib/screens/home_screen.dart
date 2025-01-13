@@ -88,16 +88,14 @@ class HomeScreen extends StatelessWidget {
                             studentController.filteredStudents[index];
                         return GestureDetector(
                           onTap: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (ctx) => StudentDetails(
-                                  profile: student.profileImagePath,
-                                  name: student.name,
-                                  batch: student.batch,
-                                  age: student.age,
-                                  phoneNo: student.phoneNo,
-                                  email: student.email,
-                                ),
+                            Get.to(
+                              StudentDetails(
+                                profile: student.profileImagePath,
+                                name: student.name,
+                                batch: student.batch,
+                                age: student.age,
+                                phoneNo: student.phoneNo,
+                                email: student.email,
                               ),
                             );
                           },

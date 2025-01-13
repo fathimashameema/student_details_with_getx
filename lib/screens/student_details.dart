@@ -1,6 +1,7 @@
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class StudentDetails extends StatelessWidget {
   final Uint8List? profile;
@@ -49,7 +50,7 @@ class StudentDetails extends StatelessWidget {
                   ),
                   Text(
                     name,
-                    style: TextStyle(fontSize: 20),
+                    style: const TextStyle(fontSize: 20),
                   ),
                   const SizedBox(
                     height: 50,
@@ -66,11 +67,11 @@ class StudentDetails extends StatelessWidget {
                       children: [
                         ListView.builder(
                           shrinkWrap: true,
-                          physics: NeverScrollableScrollPhysics(),
+                          physics: const NeverScrollableScrollPhysics(),
                           itemCount: values.length,
                           itemBuilder: (context, index) {
                             return Padding(
-                              padding: EdgeInsets.only(bottom: 10),
+                              padding: const EdgeInsets.only(bottom: 10),
                               child: Row(
                                 children: [
                                   Expanded(
@@ -79,7 +80,7 @@ class StudentDetails extends StatelessWidget {
                                       // softWrap: true,
                                       overflow: TextOverflow.ellipsis,
                                       values[index].toString(),
-                                      style: TextStyle(fontSize: 18),
+                                      style: const TextStyle(fontSize: 18),
                                     ),
                                   ),
                                 ],
@@ -97,7 +98,7 @@ class StudentDetails extends StatelessWidget {
               alignment: Alignment.topLeft,
               child: IconButton(
                 onPressed: () {
-                  Navigator.of(context).pop();
+                  Get.back();
                 },
                 icon: const Icon(
                   Icons.arrow_back_ios,

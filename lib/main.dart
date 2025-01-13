@@ -20,7 +20,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Get.put(StudentController());
     return GetMaterialApp(
       initialBinding: BindingsBuilder(() {
         Get.put(StudentController());

@@ -1,4 +1,3 @@
-
 import 'dart:io';
 import 'dart:typed_data';
 
@@ -150,9 +149,15 @@ class AddStudent extends StatelessWidget {
                   );
 
                   await studentController.addStudent(student);
-                  studentController.clearImage(); // Clear image after saving
+                  studentController.clearImage();
 
-                  Get.back(); // Navigate back to the previous screen
+                  nameController.clear();
+                  ageController.clear();
+                  numberController.clear();
+                  emailController.clear();
+                  batchController.value = batches[0];
+
+                  Get.back(); 
                 },
                 child: const Text(
                   "Save",
